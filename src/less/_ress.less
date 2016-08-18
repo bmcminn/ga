@@ -31,6 +31,17 @@ html {
     background-repeat: no-repeat;       // Set `background-repeat: no-repeat` to all elements
     padding: 0;                         // Reset `padding` and `margin` of all elements
     margin: 0;
+    // font-size: ~"calc(1em + 1vw)";      // @sauce: https://twitter.com/smashingmag/status/766384303748091904
+}
+
+body {
+    font-size: 1rem;
+}
+
+// Add default margin which we'll override when needed
+// @sauce: http://www.heydonworks.com/article/on-writing-less-damn-code
+body * + * {
+  margin-top: 1.5rem;
 }
 
 // =================================================================

@@ -49,6 +49,13 @@ app.post('/favorites', function(req, res){
 
 
 
+// make an endpoint that serves our template files as a JSON collection
+app.get('/templates', function(req, res) {
+    var hbs = require('./.temp/template-files');
+    res.json(hbs.templates);
+});
+
+
 // initialize the server on port 3000, unless defined in our .env file
 var serverPort = process.env.PORT || 3000;
 app.listen(serverPort, function(){
