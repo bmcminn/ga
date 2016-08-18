@@ -4,6 +4,7 @@
   "description": "JS Server for WDI code challenge",
   "main": "server.js",
   "scripts": {
+    "postinstall": "node ./bin/bootstrap",
     "start": "nodemon server.js",
     "serve": "nodemon server.js",
     "lint": "jshint",
