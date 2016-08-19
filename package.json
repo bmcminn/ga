@@ -7,7 +7,7 @@
     "postinstall": "node ./bin/bootstrap",
     "start": "nodemon server.js",
     "serve": "nodemon server.js",
-    "lint": "jshint",
+    "lint": "jshint ./src",
     "css": "lessc --clean-css ./src/less/main.less ./public/css/main.css",
     "minify": "node bin/minify",
     "templates": "handlebars ./views -f ./public/js/templates.js -e hbs",
