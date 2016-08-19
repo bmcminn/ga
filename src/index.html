@@ -24,18 +24,21 @@
                 </a>
 
                 <nav class="utility-nav">
-                    <a href="/About">About</a>
-                    <a href="/login">Login</a>
+                    <a href="/my_favorites">Favorites</a>
                 </ul>
             </div>
-
-            <form id="movies-search" class="search-form">
-                <input type="search" name="s" placeholder="Search movie titles here..." value="">
-                <input class="btn" type="submit" name="Search">
-            </form>
-            <ul id="movies"></ul>
         </header>
 
+
+
+        <form id="movies-search" class="search-form">
+            <input type="search" name="s" placeholder="Search movie titles here..." value="">
+            <input class="btn" type="submit" name="Search">
+        </form>
+
+        <div id="movie"></div>
+
+        <ul id="movies"></ul>
 
     </main>
 
@@ -49,12 +52,43 @@
     </script>
 
 
-    <script id="movie" type="text/template">
+    <script id="movie-listing" type="text/template">
         <h3>{{ Title }} <small>({{ Type }})</small></h3>
         <time>{{ Year }}</time>
-        <img src="{{ Poster }}" alt="">
+        <!-- <img src="{{ Poster }}" alt=""> -->
     </script>
-    <!-- <script id="" type="text/template"></script> -->
+
+
+    <script id="movie-details" type="text/template">
+        <h1>{{ Title }}</h1>
+
+        <!-- <img src="{{ Poster }}" alt=""> -->
+        Rated: {{ Rated }}
+
+        <h3>Synopsis</h3>
+        <p>{{ Plot }}</p>
+
+        <dl>
+            <dt>Actors: </dt>
+                <dd>{{ Actors }}</dd>
+
+            <dt>Awards:</dt>
+                <dd>{{ Awards }}</dd>
+
+            <dt>Country:</dt>
+                <dd>{{ Country }}</dd>
+
+            <dt>Director:</dt>
+                <dd>{{ Director }}</dd>
+
+            <dt>Genre:</dt>
+                <dd>{{ Genre }}</dd>
+
+            <dt>Metascore:</dt>
+                <dd>{{ Metascore }}</dd>
+        </dl>
+
+    </script>
     <!-- <script id="" type="text/template"></script> -->
     <!-- <script id="" type="text/template"></script> -->
     <!-- <script id="" type="text/template"></script> -->

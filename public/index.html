@@ -1,7 +1,33 @@
-<!DOCTYPE html><html lang=en><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1"><title>My MoviesDB</title><meta name=application-name content=MyMoviesDB><link href="https://fonts.googleapis.com/css?family=Lora:700|Roboto|Roboto+Slab:700" rel=stylesheet async><link href=https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css rel=stylesheet async><link href=/css/main.css rel=stylesheet><main id=app role=main class=col mobile=1-1><header><div><a class=brand href=/ >MyMoviesDB</a><nav class=utility-nav><a href=/About>About</a> <a href=/login>Login</a></nav></div><form id=movies-search class=search-form><input type=search name=s placeholder="Search movie titles here..."> <input class=btn type=submit name=Search></form><ul id=movies></ul></header></main><script id=movie-search-view type=text/template><form role="movie-search-field" action="search-movies">
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1"><title>My MoviesDB</title><meta name=application-name content=MyMoviesDB><link href="https://fonts.googleapis.com/css?family=Lora:700|Roboto|Roboto+Slab:700" rel=stylesheet async><link href=https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css rel=stylesheet async><link href=/css/main.css rel=stylesheet><main id=app role=main class=col mobile=1-1><header><div><a class=brand href=/ >MyMoviesDB</a><nav class=utility-nav><a href=/my_favorites>Favorites</a></nav></div></header><form id=movies-search class=search-form><input type=search name=s placeholder="Search movie titles here..."> <input class=btn type=submit name=Search></form><div id=movie></div><ul id=movies></ul></main><script id=movie-search-view type=text/template><form role="movie-search-field" action="search-movies">
             <label for="s">Search</label>
             <input type="text" name="s" value="{{ search }}" placeholder="Search for movies...">
             <input type="submit" value="Search">
-        </form></script><script id=movie type=text/template><h3>{{ Title }} <small>({{ Type }})</small></h3>
+        </form></script><script id=movie-listing type=text/template><h3>{{ Title }} <small>({{ Type }})</small></h3>
         <time>{{ Year }}</time>
-        <img src="{{ Poster }}" alt=""></script><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js></script><script src=/js/app.js></script>
+        <!-- <img src="{{ Poster }}" alt=""> --></script><script id=movie-details type=text/template><h1>{{ Title }}</h1>
+
+        <!-- <img src="{{ Poster }}" alt=""> -->
+        Rated: {{ Rated }}
+
+        <h3>Synopsis</h3>
+        <p>{{ Plot }}</p>
+
+        <dl>
+            <dt>Actors: </dt>
+                <dd>{{ Actors }}</dd>
+
+            <dt>Awards:</dt>
+                <dd>{{ Awards }}</dd>
+
+            <dt>Country:</dt>
+                <dd>{{ Country }}</dd>
+
+            <dt>Director:</dt>
+                <dd>{{ Director }}</dd>
+
+            <dt>Genre:</dt>
+                <dd>{{ Genre }}</dd>
+
+            <dt>Metascore:</dt>
+                <dd>{{ Metascore }}</dd>
+        </dl></script><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js></script><script src=/js/app.js></script>
