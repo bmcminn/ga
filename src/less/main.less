@@ -2,6 +2,8 @@
 @import "_vars";
 @import "_ress";
 @import "_grid";
+@import "_button";
+@import "_form";
 
 body {
     font-family: sans-serif;
@@ -13,4 +15,23 @@ body {
 // Setup grids
 .grid(mobile,   @mobile);
 .grid(tablet,   @tablet);
-.grid(desktop,  @desktop);
+// .grid(desktop,  @desktop);
+
+
+//
+// HEADING STYLES
+//
+
+.brand {
+    font-size: 1.2em;
+    display: block;
+    padding: 1rem;
+}
+
+
+.search-form {
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+

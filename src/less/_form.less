@@ -1,0 +1,25 @@
+.search-form {
+    display: flex;
+    border: 1px solid @gray;
+    border-radius: @radius;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+
+    > * {
+        display: flex;
+        margin: 0;
+    }
+
+    input, button {
+        padding: @button-padding;
+    }
+
+    [type="search"] {
+        flex: 1 1 4rem;
+    }
+
+    [type="submit"] {
+        flex: 0 0 auto;
+    }
+}

@@ -15,9 +15,28 @@
     <link href="/css/main.css" rel="stylesheet">
 </head>
 <body>
-    <main id="app" role="main">
-        <div id="movies-search"></div>
-        <div id="movies"></div>
+    <main id="app" role="main" class="col" mobile="1-1">
+
+        <header>
+            <div>
+                <a class="brand" href="/">
+                    MyMoviesDB
+                </a>
+
+                <nav class="utility-nav">
+                    <a href="/About">About</a>
+                    <a href="/login">Login</a>
+                </ul>
+            </div>
+
+            <form id="movies-search" class="search-form">
+                <input type="search" name="s" placeholder="Search movie titles here..." value="">
+                <input class="btn" type="submit" name="Search">
+            </form>
+            <ul id="movies"></ul>
+        </header>
+
+
     </main>
 
 
